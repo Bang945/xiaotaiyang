@@ -46,8 +46,12 @@ ActiveRecord::Schema.define(version: 20141227080143) do
     t.string   "postnum"
     t.string   "tel"
     t.string   "note"
+  end
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "context"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
+
 
 end
