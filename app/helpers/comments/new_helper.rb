@@ -1,0 +1,2 @@
+module Comments::NewHelper
+end
