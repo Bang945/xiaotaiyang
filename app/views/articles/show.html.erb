@@ -1,112 +1,22 @@
-
-          <!-- <h3>
-            发布物资需求 <small class="text-danger"> <em>为了您的安全，请如实填写下面信息</em></small>
-          </h3> -->
-          <h4>
-            小草雨鞋行动：为贵州孩子募集1000双小雨鞋
-          </h4>
-
-          <dl>
-            <dt>求助时间:</dt> 
-            <dd>2014-12-13</dd>
-          </br>
-          <dt>
-            求助对象:
-          </dt>
-          <dd>
-            贵州省偏远山区的中小学生
-          </dd>
-          <br>
-          <dt>
-            需要物资:
-          </dt>
-          <dd>
-            鞋子
-          </dd>
-          <br>
-          <dt>
-            邮递地址:
-          </dt>
-          <dd>
-            贵州省毕节地区和雍县第一中学, 邮政编码 550000 <small>（仅邮政）</small>
-          </dd>
-        </dl>
-
-        <blockquote>
-          <p class="text-primary"><strong>需要：</strong>学习用具，笔，本，课外书，小学生工具书（如新华字典），或者乡村教师能用的汉英词典，英语学习磁带，旧电脑等等有意义的东西。 </p>
-        </blockquote>
-
-
-        <div class="padding">
-          <%= image_tag("book4.jpeg")%>
-          <br>
-        </div>
-        <div>
-          <%= image_tag("yifu3.jpg")%>
-        </div>
-
-        <div class="padding">
-
-          <p>
-            在去贵州省箐口乡过瓦小学的路上，我们偶遇了这个放学回家的小男孩。学校通往外面的道路格外泥泞，这个孩子一个人寂寞地走在路上，仔细一看，他满是污泥鞋子里面的小脚是光溜溜的，我们问他脚冷不冷？他点了点头，再问他为什么不穿双袜子？这个孩子陷入了深深的沉默当中。
-            在贵州省普安县辣子树民族小学，我们看到了年仅四岁半还在上学前班的杨进芬，她告诉们每天要独自翻过一座大山，走上半个小时的山路才能到达学校。我忍不住伸手去摸摸小进芬的鞋袜，摸到的是一手泥水，孩子的脚早冻得像冰疙瘩一般。
-            天已入冬，孩子们大多衣衫单薄，小脸儿被冻得通红，而脚上穿什么的都有，有的鞋子已经破了，有的光脚穿着凉鞋，还有的露着半截腿。由于这里天气多雨，道路泥泞湿滑，孩子们的小脚和鞋子就这么被雨水和污泥浸泡着，让人看了心疼。而小雨鞋对孩子们来说，是最为实际的需要，只要30元钱，就可以让一个孩子穿上防滑防寒的雨鞋，让他们上学回家的路走得更顺畅一些。
-
-          </p>
-
+<div class="row-fluid padding-set">
+  <div class="span2">
   </div>
 
-<p id="notice"><%= notice %></p>
+  <div class="span6">
+    <%= render "detail" %>
+    <%= link_to 'Back', articles_path %>
+    </br>
+    <%= render "tips" %>
+    </br>
+    
+    <%= render "comments_new" %>
+    <%= render "comments_list" %>
+  </div> <!-- /.span6 -->
 
-<p>
-  <strong>Name:</strong>
-  <%= @article.name %>
-</p>
+  <div class="span4">
+    <%= render "quotes" %>
+  </div>
 
-<p>
-  <strong>Recipient:</strong>
-  <%= @article.recipient %>
-</p>
+</div>
 
-<p>
-  <strong>Tag:</strong>
-  <%= @article.tag %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @article.location %>
-</p>
-
-<p>
-  <strong>Detail:</strong>
-  <%= @article.detail %>
-</p>
-
-<p>
-  <strong>Context:</strong>
-  <%= @article.context %>
-</p>
-
-<p>
-  <strong>Followtimes:</strong>
-  <%= @article.followtimes %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @article.type %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @article.status %>
-</p>
-
-<p>
-  <strong>Follow:</strong>
-  <%= @article.follow %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>

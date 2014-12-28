@@ -1,0 +1,18 @@
+<h3>Add a comment:</h3>
+
+<!-- sentence IF is for test -->
+<% if false %>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<p>
+  <%= f.label :user %><br>
+  <%= f.text_field :user %>
+</p>
+<p>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+<% end %>
