@@ -1,5 +1,15 @@
-<h1>New User</h1>
+<div class="row-fluid padding-set">
+	<div class="span2">
+	</div>
 
-<%= render 'form' %>
+	<div class="span6">
+		<h4>注册</h4>
+		<%= render "form" %>
+		<%= link_to 'Back', users_path %>
+	</div>
 
-<%= link_to 'Back', users_path %>
+	<div class="span4">
+		<%= render "shares/quotes" %>
+	</div>
+
+</div>
