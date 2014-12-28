@@ -36,6 +36,21 @@ ActiveRecord::Schema.define(version: 20141227080143) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "models", force: :cascade do |t|
+    t.string   "comment"
+    t.string   "user"
+    t.string   "content"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -46,12 +61,8 @@ ActiveRecord::Schema.define(version: 20141227080143) do
     t.string   "postnum"
     t.string   "tel"
     t.string   "note"
-  end
-  create_table "posts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "context"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
+  end
 
 end
