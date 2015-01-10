@@ -1,0 +1,17 @@
+ 
+<h5>Comments</h5>
+
+<!-- sentence IF is for test -->
+<% if false %>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.user %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+  </p>
+<% end %>
+<% end %>

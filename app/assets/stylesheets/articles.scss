@@ -1,3 +1,30 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.right {
+  float: right;
+}
+.home {
+  background: #222 ;
+  color: white;
+}
+.padding-set {
+  margin-top: 50px ;
+}
+.bottom {
+  margin: 42px 0 0 0;
+}
+
+.thumbnail {
+  height: 360px;
+}
+
+
+.padding {
+	margin:50px 0 20px 0;
+}
+
+.qoute {
+	padding: 20px;
+}
