@@ -32,6 +32,7 @@
 
         <!-- Show preview of a thumnail/article -->
         <% @articles.each do |article| %>
+        <% @article = article %>
         <%= render "articles/index/thumbnail" %>
         <% end %>
 

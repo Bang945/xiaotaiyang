@@ -2,9 +2,11 @@
   <div class="thumbnail"><!-- 
       <img data-src="holder.js/100%x200" alt=""> -->
     <div class="caption">
-        <h4> xxxx 小学</h4>
-        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id niblit.</p>
-
+        <h6> <%= @article.name %></h6>
+        <p><%= @article.recipient %> </p>
+        <% pre = (@article.detail).to_s %>
+        <p><%= pre[0, 30] %>..
+        <%= link_to '更多', @article %></p>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="60" 
                aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
