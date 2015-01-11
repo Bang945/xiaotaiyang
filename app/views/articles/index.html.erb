@@ -31,8 +31,7 @@
         </div>
 
         <!-- Show preview of a thumnail/article -->
-        <% # @articles.each do |article| %>
-        <% for i in 0..15 %>
+        <% @articles.each do |article| %>
         <%= render "articles/index/thumbnail" %>
         <% end %>
 
