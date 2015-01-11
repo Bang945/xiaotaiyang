@@ -1,4 +1,5 @@
 
+<h4> 发布物资需求 </h4>
 
 <%= form_for(@article) do |f| %>
   <% if @article.errors.any? %>
@@ -14,45 +15,43 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "名称" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :recipient %><br>
+    <%= f.label "受助者" %><br>
     <%= f.text_field :recipient %>
   </div>
   <div class="field">
-    <%= f.label :tag %><br>
-    <%= f.text_field :tag %>
+     <%= f.label "需要物资类型" %><br>
+    <!-- Primary tags input -->
+<div class="tagsinput-primary">
+<input name="tag" class="tag" data-role="tagsinput" value="衣服" />
+</div>
+   
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label "地址" %><br>
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :detail %><br>
+    <%= f.label "物资详细描述" %><br>
     <%= f.text_field :detail %>
   </div>
   <div class="field">
-    <%= f.label :context %><br>
-    <%= f.text_field :context %>
+    <%= f.label "受助者情况详细介绍" %><br>
+    <%= text_area_tag(:context, "Hi, nice site", size: "60x10") %>
   </div>
-  <div class="field">
-    <%= f.label :followtimes %><br>
-    <%= f.number_field :followtimes %>
-  </div>
-  <div class="field">
+ 
+  <div class="field" style="display:none">
     <%= f.label :type %><br>
     <%= f.text_field :type %>
   </div>
-  <div class="field">
+  <div class="field"  style="display:none">
     <%= f.label :status %><br>
     <%= f.text_field :status %>
   </div>
-  <div class="field">
-    <%= f.label :follow %><br>
-    <%= f.text_field :follow %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
