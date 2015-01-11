@@ -26,6 +26,8 @@
      <%= f.label "需要物资类型" %><br>
     <!-- Primary tags input -->
 <div class="tagsinput-primary">
+
+    <%= f.text_field :tag %>
 <input name="tag" class="tag" data-role="tagsinput" value="衣服" />
 </div>
    
@@ -36,11 +38,15 @@
   </div>
   <div class="field">
     <%= f.label "物资详细描述" %><br>
-    <%= f.text_field :detail %>
+    <!-- 
+    <input type="text" placeholder="..." class="form-control" /> -->
+
+    <%= f.text_area :detail,  :rows => 3, :cols => 100 %>
   </div>
   <div class="field">
     <%= f.label "受助者情况详细介绍" %><br>
-    <%= text_area_tag(:context, "Hi, nice site", size: "60x10") %>
+
+    <%= f.text_area :context,  :rows => 10, :cols => 100 %>
   </div>
  
   <div class="field" style="display:none">
@@ -53,6 +59,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "发布", :class => "btn btn-primary" %>
   </div>
 <% end %>

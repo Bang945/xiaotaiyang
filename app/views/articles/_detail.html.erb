@@ -2,53 +2,53 @@
           <!-- <h3>
             发布物资需求 <small class="text-danger"> <em>为了您的安全，请如实填写下面信息</em></small>
           </h3> -->
-          <p>
-  <strong>Name:</strong>
-  <%= @article.id %>
-</p>
+
           <h4>
-            小草雨鞋行动：为贵州孩子募集1000双小雨鞋
-            
+            <%= @article.name %>            
           </h4>
 
           <dl>
             <dt>求助时间:</dt> 
-            <dd>2014-12-13</dd>
+            <dd><%= @article.created_at %></dd>
           </br>
           <dt>
             求助对象:
           </dt>
           <dd>
-            贵州省偏远山区的中小学生
+            <%= @article.recipient %>
           </dd>
           <br>
           <dt>
             需要物资:
           </dt>
           <dd>
-            鞋子
+            
+            <%= @article.tag %>
           </dd>
           <br>
           <dt>
             邮递地址:
           </dt>
           <dd>
-            贵州省毕节地区和雍县第一中学, 邮政编码 550000 <small>（仅邮政）</small>
+
+            <%= @article.location %>
+            <small>（仅邮政）</small>
           </dd>
         </dl>
 
         <blockquote>
-          <p class="text-primary"><strong>需要：</strong>学习用具，笔，本，课外书，小学生工具书（如新华字典），或者乡村教师能用的汉英词典，英语学习磁带，旧电脑等等有意义的东西。 </p>
+          <p class="text-primary"><strong>需要：</strong>
+
+            <%= @article.detail%>
+          </p>
         </blockquote>
 
-
+<!-- 
         <div class="padding">
-          <%= image_tag("book4.jpeg")%>
           <br>
         </div>
         <div>
-          <%= image_tag("yifu3.jpg")%>
-        </div>
+        </div> -->
 
         <div class="padding">
 
