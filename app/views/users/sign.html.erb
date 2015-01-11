@@ -1,0 +1,30 @@
+<div class="row-fluid padding-set">
+	<div class="span2">
+	</div>
+
+	<div class="span6">
+		<!-- form_for signin -->
+		<%= form_for() do |f| %>
+		<h4>登录</h4>
+		<div class="field">
+			<%= f.label :email %><br>
+			<%= f.text_field :email %>
+		</div>
+		<div class="field">
+			<%= f.label :passwd %><br>
+			<%= f.text_field :passwd %>
+		</div>
+
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+		<% end %>
+
+		<%= link_to 'Back', users_path %>
+	</div>
+
+	<div class="span4">
+		<%= render "shares/quotes" %>
+	</div>
+
+</div>

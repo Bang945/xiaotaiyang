@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   root 'articles#index'
   
   resources :posts
+  resources :sessions
+
+  match '/signin', to: 'sessions#new',  via: 'get'
+  match '/signout', to: 'sessions#destroy',  via: 'delete'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
