@@ -12,38 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label "您的邮箱地址" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :passwd %><br>
-    <%= f.text_field :passwd %>
+    <%= f.label "设置密码" %><br>
+    <%= f.text_field :passwd %><br>
+
+    <%= f.label "重新输入密码" %><br>
+    <%= f.text_field :passwd %><br>
   </div>
+
   <div class="field">
-    <%= f.label :level %><br>
-    <%= f.text_field :level %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "用户名" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label "您的地址" %><br>
     <%= f.text_field :location %>
   </div>
+
   <div class="field">
-    <%= f.label :postnum %><br>
-    <%= f.text_field :postnum %>
-  </div>
-  <div class="field">
-    <%= f.label :tel %><br>
+    <%= f.label "您的联系电话" %><br>
     <%= f.text_field :tel %>
   </div>
   <div class="field">
-    <%= f.label :note %><br>
+    <%= f.label "备注" %><br>
     <%= f.text_field :note %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "提交" ,:class => "btn btn-primary"%>
   </div>
 <% end %>
