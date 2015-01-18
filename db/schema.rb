@@ -25,15 +25,15 @@ ActiveRecord::Schema.define(version: 20150118114403) do
     t.string   "follow"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "type"
+    t.integer  "art_type"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string   "user"
     t.string   "content"
-    t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "com_type"
   end
 
   create_table "models", force: :cascade do |t|
