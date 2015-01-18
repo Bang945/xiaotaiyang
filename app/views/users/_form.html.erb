@@ -16,11 +16,24 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
+<<<<<<< HEAD
     <%= f.label "设置密码" %><br>
     <%= f.text_field :passwd %><br>
 
     <%= f.label "重新输入密码" %><br>
     <%= f.text_field :passwd %><br>
+=======
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+   <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+>>>>>>> jerry
   </div>
 
   <div class="field">
@@ -40,6 +53,7 @@
     <%= f.label "备注" %><br>
     <%= f.text_field :note %>
   </div>
+
   <div class="actions">
     <%= f.submit "提交" ,:class => "btn btn-primary"%>
   </div>
