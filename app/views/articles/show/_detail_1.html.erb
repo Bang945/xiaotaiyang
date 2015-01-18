@@ -1,0 +1,35 @@
+
+          <!-- <h3>
+            发布物资需求 <small class="text-danger"> <em>为了您的安全，请如实填写下面信息</em></small>
+          </h3> -->
+
+          <dt>
+            类型:
+          </dt>
+          <dd>
+            <%= @article.tag %>
+          </dd>
+          <br>
+          <dt>
+            联系方式:
+          </dt>
+          <dd>
+
+            <%= @article.location %>
+          </dd>
+        </dl>
+      </br>
+        <blockquote>
+          <p class="text-primary"><strong>物资: </strong>
+
+            <%= @article.detail%>
+          </p>
+        </blockquote>
+
+<!-- 
+        <div class="padding">
+          <br>
+        </div>
+        <div>
+        </div> -->
+

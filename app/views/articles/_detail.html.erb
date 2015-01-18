@@ -1,62 +1,8 @@
 
-          <!-- <h3>
-            发布物资需求 <small class="text-danger"> <em>为了您的安全，请如实填写下面信息</em></small>
-          </h3> -->
+<% if @article.art_type == 1 %>
+<%= render "articles/show/detail_1" %>
 
-          <h4>
-            <%= @article.name %>            
-          </h4>
+<% else @article.art_type == "0" %>
+<%= render "articles/show/detail_0" %>
 
-          <dl>
-            <dt>求助时间:</dt> 
-            <dd><%= @article.created_at %></dd>
-          </br>
-          <dt>
-            求助对象: 
-          </dt>
-          <dd>
-            <%= @article.recipient %>
-          </dd>
-          <br>
-          <dt>
-            需要物资:
-          </dt>
-          <dd>
-            
-            <%= @article.tag %>
-          </dd>
-          <br>
-          <dt>
-            邮递地址:
-          </dt>
-          <dd>
-
-            <%= @article.location %>
-            <small>（仅邮政）</small>
-          </dd>
-        </dl>
-
-        <blockquote>
-          <p class="text-primary"><strong>需要：</strong>
-
-            <%= @article.detail%>
-          </p>
-        </blockquote>
-
-<!-- 
-        <div class="padding">
-          <br>
-        </div>
-        <div>
-        </div> -->
-
-        <div class="padding">
-
-          <p>
-            在去贵州省箐口乡过瓦小学的路上，我们偶遇了这个放学回家的小男孩。学校通往外面的道路格外泥泞，这个孩子一个人寂寞地走在路上，仔细一看，他满是污泥鞋子里面的小脚是光溜溜的，我们问他脚冷不冷？他点了点头，再问他为什么不穿双袜子？这个孩子陷入了深深的沉默当中。
-            在贵州省普安县辣子树民族小学，我们看到了年仅四岁半还在上学前班的杨进芬，她告诉们每天要独自翻过一座大山，走上半个小时的山路才能到达学校。我忍不住伸手去摸摸小进芬的鞋袜，摸到的是一手泥水，孩子的脚早冻得像冰疙瘩一般。
-            天已入冬，孩子们大多衣衫单薄，小脸儿被冻得通红，而脚上穿什么的都有，有的鞋子已经破了，有的光脚穿着凉鞋，还有的露着半截腿。由于这里天气多雨，道路泥泞湿滑，孩子们的小脚和鞋子就这么被雨水和污泥浸泡着，让人看了心疼。而小雨鞋对孩子们来说，是最为实际的需要，只要30元钱，就可以让一个孩子穿上防滑防寒的雨鞋，让他们上学回家的路走得更顺畅一些。
-
-          </p>
-
-  </div>
+<% end %>
