@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141227080143) do
+ActiveRecord::Schema.define(version: 20150118114403) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "name"
@@ -21,19 +21,19 @@ ActiveRecord::Schema.define(version: 20141227080143) do
     t.string   "detail"
     t.string   "context"
     t.integer  "followtimes"
-    t.string   "type"
     t.string   "status"
     t.string   "follow"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "art_type"
   end
 
   create_table "comments", force: :cascade do |t|
     t.string   "user"
     t.string   "content"
-    t.string   "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "com_type"
   end
 
   create_table "models", force: :cascade do |t|
