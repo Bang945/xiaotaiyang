@@ -21,16 +21,14 @@
     <%= f.label "受助者" %><br>
     <%= f.text_field :recipient %>
   </div>
+  
   <div class="field">
      <%= f.label "需要物资类型" %><br>
-    <!-- Primary tags input -->
-<div class="tagsinput-primary">
-
-    <%= f.text_field :tag %>
-<input name="tag" class="tag" data-role="tagsinput" value="衣服" />
-</div>
-   
+    <div class="tagsinput-primary">
+      <%= f.text_field :tag, "data-role" => "tagsinput", :value => "衣服" %>
+    </div>
   </div>
+
   <div class="field">
     <%= f.label "地址" %><br>
     <%= f.text_field :location %>
