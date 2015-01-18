@@ -2,7 +2,7 @@
   <div class="thumbnail"><!-- 
       <img data-src="holder.js/100%x200" alt=""> -->
     <div class="caption">
-        <h6> <%= @article.name %></h6>
+        <%= link_to @article.name, @article, :class => "" %>
         <p><%= @article.recipient %> </p>
         <% pre = (@article.detail).to_s %>
         <p><%= pre[0, 30] %>..
